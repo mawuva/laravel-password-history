@@ -13,11 +13,11 @@ class CreatePasswordHistoriesTable extends Migration
      */
     public function up()
     {
-        $password_history_enabled               = config('password-history.password_history.enable');
+        $password_history_enabled               = config('password-history.enable');
 
-        $table                                  = config('password-history.password_history.table.name');
-        $password_histories_table_pk            = config('password-history.password_history.table.primary_key');
-        $password_histories_table_user_fk       = config('password-history.password_history.table.user_foreign_key');
+        $table                                  = config('password-history.table.name');
+        $password_histories_table_pk            = config('password-history.table.primary_key');
+        $password_histories_table_user_fk       = config('password-history.table.user_foreign_key');
 
         $users_table                            = config('password-history.user.table.name');
         $users_table_primary_key                = config('password-history.user.table.primary_key');
@@ -26,7 +26,7 @@ class CreatePasswordHistoriesTable extends Migration
         $uuid_column                            = config('password-history.uuids.column');
 
         if ($password_history_enabled && !Schema::hasTable($table)) {
-            Schema::create('password_histories', function (Blueprint $table)
+            Schema::create($table, function (Blueprint $table)
             use (
                 $password_histories_table_pk, $uuid_enable, $uuid_column,
                 $password_histories_table_user_fk, $users_table_primary_key, $users_table
