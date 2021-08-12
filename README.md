@@ -1,8 +1,5 @@
 # Laravel Password History
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mawuekom/laravel-password-history.svg?style=flat-square)](https://packagist.org/packages/mawuekom/laravel-password-history)
-[![Total Downloads](https://img.shields.io/packagist/dt/mawuekom/laravel-password-history.svg?style=flat-square)](https://packagist.org/packages/mawuekom/laravel-password-history)
-![GitHub Actions](https://github.com/mawuekom/laravel-password-history/actions/workflows/main.yml/badge.svg)
 
 This package allows to store users password history and check if the user can use the same for updating or not.
 Then, you can tell your users when they will be going to create a new password for their accounts
