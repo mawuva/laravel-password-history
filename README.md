@@ -164,6 +164,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
+## Report bug
+Contact me on Twitter [@ephraimseddor](https://twitter.com/ephraimseddor)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
