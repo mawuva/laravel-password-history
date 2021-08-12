@@ -16,7 +16,7 @@ class PasswordHistoryChecker
      *
      * @return void
      */
-    public function validatePassword(Model $user, string $password): void
+    public static function validatePassword(Model $user, string $password): void
     {
         $password_history_enabled           = config('password-history.enable');
         $password_history_checker_enabled   = config('password-history.checker');

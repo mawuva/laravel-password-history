@@ -10,7 +10,7 @@ return [
      */
     
     'enable'                    => true,
-    'model'                     => null,
+    'model'                     => Mawuekom\PasswordHistory\Models\PasswordHistory::class,
     'checker'                   => false,
     'number_to_check'           => 3,
     'name'                      => 'Password History',
