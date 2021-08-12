@@ -1,13 +1,13 @@
 <?php
 
-namespace Mawuekom\LaravelPasswordHistory;
+namespace Mawuekom\PasswordHistory;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Mawuekom\LaravelPasswordHistory\Skeleton\SkeletonClass
+ * @see \Mawuekom\PasswordHistory\Skeleton\SkeletonClass
  */
-class LaravelPasswordHistoryFacade extends Facade
+class PasswordHistoryFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LaravelPasswordHistoryFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-password-history';
+        return 'password-history';
     }
 }

@@ -1,11 +1,13 @@
 <?php
 
-namespace Mawuekom\LaravelPasswordHistory;
+namespace Mawuekom\PasswordHistory;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelPasswordHistoryServiceProvider extends ServiceProvider
+class PasswordHistoryServiceProvider extends ServiceProvider
 {
+    private $_packageTag = 'password-history';
+
     /**
      * Bootstrap the application services.
      */
@@ -14,29 +16,29 @@ class LaravelPasswordHistoryServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-password-history');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-password-history');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'password-history');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'password-history');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-password-history.php'),
+                __DIR__.'/../config/password-history.php' => config_path('password-history.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-password-history'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/password-history'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laravel-password-history'),
+                __DIR__.'/../resources/assets' => public_path('vendor/password-history'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-password-history'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/password-history'),
             ], 'lang');*/
 
             // Registering package commands.
@@ -50,11 +52,11 @@ class LaravelPasswordHistoryServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-password-history');
+        $this->mergeConfigFrom(__DIR__.'/../config/password-history.php', 'password-history');
 
         // Register the main class to use with the facade
-        $this->app->singleton('laravel-password-history', function () {
-            return new LaravelPasswordHistory;
+        $this->app->singleton('password-history', function () {
+            return new PasswordHistory;
         });
     }
 }
