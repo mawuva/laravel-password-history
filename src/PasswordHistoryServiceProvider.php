@@ -13,6 +13,8 @@ class PasswordHistoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        require_once __DIR__.'/helpers.php';
+
         /*
          * Optional methods to load your package assets
          */
@@ -35,8 +37,8 @@ class PasswordHistoryServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/password-history.php', 'password-history');
 
         // Register the main class to use with the facade
-        $this->app->singleton('password-history', function () {
+        /*$this->app->singleton('password-history', function () {
             return new PasswordHistory;
-        });
+        });*/
     }
 }
