@@ -3,10 +3,13 @@
 namespace Mawuekom\PasswordHistory\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Mawuekom\ModelUuid\Utils\GeneratesUuid;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PasswordHistory extends Model
 {
+    use GeneratesUuid;
+    
     /**
      * Create a new model instance.
      *
